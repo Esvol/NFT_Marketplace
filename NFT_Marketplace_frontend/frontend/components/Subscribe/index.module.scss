@@ -1,0 +1,202 @@
+// .subscribe{
+//     width: 100%;
+
+//     &_box{
+//         width: 80%;
+//         margin: 0 auto;
+//         padding:  8rem 0;
+    
+//         display: grid;
+//         grid-template-columns: 1.5fr 2fr;
+//         align-items: center;
+
+//         &_left{
+//             h2{
+//                 font-size: 3rem;
+//             }
+
+//             &_box{
+//                 display: flex;
+//                 align-items: center;
+//                 gap: 1rem;
+//                 margin-top: 2rem;
+    
+//                 small{
+//                     font-size: 1rem;
+//                     font-weight: 700;
+//                 }
+    
+//                 span{
+//                     background-color: var(--icons-color);
+//                     color: var(--main-bg-color);
+//                     padding: .5rem 1rem;
+//                     border-radius: 2rem;
+//                     width: 4rem;
+//                     text-align: center;
+//                 }
+//             }
+
+//             &_input{
+//                 margin-top: 3rem;
+//                 padding: 2rem;
+//                 width: 80%;
+//                 border-radius: 4rem;
+//                 background-color: var(--icons-color);
+//                 color: var(--main-bg-color);
+            
+//                 display: flex;
+//                 align-items: center;
+
+//                 input{
+//                     background-color: transparent;
+//                     border: 0;
+//                     outline: none;
+//                     width: 90%;
+
+//                     &::placeholder{
+//                         color: var(--main-bg-color);
+//                         font-size: 1.2rem;
+//                     }
+
+//                     &_icon{
+//                         font-size: 2rem;
+//                     }
+//                 }
+//             }
+//         }
+
+//         p{
+//             font-size: 1.2rem;
+//         }
+        
+//     }
+// }
+
+.subscribe{
+    width: 100%;
+
+    &_box{
+        width: 80%;
+        margin: 0 auto;
+        padding:  8rem 0;
+    
+        display: flex;
+        align-items: center;
+
+        &_left{
+            h2{
+                font-size: 3rem;
+            }
+
+            &_box{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-top: 2rem;
+    
+                small{
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+    
+                span{
+                    background-color: var(--icons-color);
+                    color: var(--main-bg-color);
+                    padding: .5rem 1rem;
+                    border-radius: 2rem;
+                    width: 4rem;
+                    text-align: center;
+                }
+            }
+
+            &_input{
+                margin-top: 3rem;
+                padding: 2rem;
+                width: 80%;
+                border-radius: 4rem;
+                background-color: var(--icons-color);
+                color: var(--main-bg-color);
+            
+                display: flex;
+                align-items: center;
+
+                input{
+                    background-color: transparent;
+                    border: 0;
+                    outline: none;
+                    width: 90%;
+
+                    &::placeholder{
+                        color: var(--main-bg-color);
+                        font-size: 1.2rem;
+                    }
+
+                    &_icon{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
+        p{
+            font-size: 1.2rem;
+        }
+
+        &_right_img{
+            object-fit: contain;
+            height: 600px;
+            width: 800px;
+        }
+        
+    }
+}
+
+@media screen and (min-device-width: 319px) and (max-device-width: 768px){
+    .subscribe_box{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 4rem;
+
+        &_left{
+            &_input{
+                width: 70%;
+                padding: 1rem;
+            }
+
+            h2{
+                font-size: 2rem;
+            }
+        }
+
+        &_right_img{
+            width: 70vw;
+            height: 50vw;
+        }
+    }
+
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1084px){
+    .subscribe_box{
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+
+        &_left{
+            &_input{
+                width: 70%;
+                padding: 1rem;
+            }
+
+            h2{
+                font-size: 2rem;
+            }
+        }
+
+        &_right_img{
+            width: 70vw;
+            height: 50vw;
+        }
+    }
+}

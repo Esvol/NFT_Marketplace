@@ -1,0 +1,272 @@
+.bigNFTSlider_box{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    height: 800px;
+    margin-bottom: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_left{
+        margin-top: -5px;
+        margin-right: -6rem;
+        background-color: var(--main-bg-color);
+        box-shadow: var(--box-shadow-2);
+        border-radius: 1rem;
+        padding: 2rem;
+        z-index: 1111;
+        width: 30vw;
+        height: 750px;
+
+        h2{
+            font-size: 3rem;
+        }
+
+        &_creator{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+
+            &_profile{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                &_img{
+                    border-radius: 50%;
+                }
+
+                &_info{
+
+                    p{
+                        margin-top: 0.5rem;
+                    }
+                }
+            }
+
+            &_collection{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                &_icon{
+                    font-size: 4rem;
+                }
+
+                &_info{
+
+                }
+            }
+            
+        }
+
+        &_bidding_box{
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+            height: 4rem;
+            border: 3px solid var(--shadow-dark-color);
+            margin-block: 2rem;
+            padding: 0.3rem 4rem;
+            border-radius: .5rem;
+
+            &_auction{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            &_price{
+                width: 100%;
+                font-weight: 600;
+                span{
+                    text-align: end;
+                }
+            }
+
+            &_current{
+                top: -1.5rem;
+                position: absolute;
+                background-color: var(--shadow-dark-color);
+                padding: 1rem 2rem;
+                border-radius: .5rem;
+                font-weight: 600; 
+            }
+
+            &_icon{
+                font-size: 2rem;
+            }
+
+            &_timer{
+                display: flex;
+                align-items: center;
+                gap: 3rem;
+                text-align: center;
+                padding: 2rem 0rem 3rem 0;
+                border-bottom:  1px solid var(--shadow-dark-color);
+            
+                &_item{
+                    p{
+                        font-size: 2rem;
+                        font-weight: 900;
+                    }
+                }
+            }
+
+        }
+
+        &_button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+            padding-block: 2rem 0rem;
+        }
+
+        &_sliderBtn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            font-size: 2rem;
+            margin-top: 3rem;
+
+            &_icon{
+                cursor: pointer;
+                transition:  all .3s ease-in;
+
+                &:hover{
+                    background-color: var(--shadow-dark-color);
+                    border-radius: 50%;
+                    padding: 1rem;
+                }                
+            }
+        }
+
+    }
+
+    &_right{
+        user-select: none;
+        display: flex;        
+        padding: 1rem;
+        background-color: var(--main-bg-color);
+        border-radius: 2.5rem;
+        box-shadow: var(--box-shadow-2);
+
+        &_box{
+            position: relative;
+
+            &_img{
+                object-fit: cover;
+                border-radius: 2rem;
+                max-width: 700px;
+                max-height: 800px;
+            }
+            
+            &_like{
+                position: absolute;
+                top: 3rem;
+                right: 3rem;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                font-size: 1.2rem;
+                background-color: var(--icons-color);
+                color: var(--shadow-dark-color);
+                padding: .5rem 1rem;
+                border-radius: 5rem;
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 1041px) {
+    .bigNFTSlider_box{
+        height: 100%;
+        padding: 0 0 2rem 0;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 90%;
+
+        &_left{
+            width: 100%;
+            height: 65vh;
+            padding: 1.5rem;
+            margin: 0;
+
+            &_creator{
+                gap: 1rem;
+                grid-template-columns: 1.8fr 1fr;
+
+                &_profile_info{
+                    font-size: .8rem;
+                }
+
+                &_collection{
+                    &_icon{
+                        font-size: 1.5rem;
+                    }
+
+                    &_info{
+                        font-size: .8rem;
+                    }
+                }
+            }
+
+            &_bidding_box{
+                height: 4rem;
+            }
+
+            &_bidding_box_timer{
+                padding: 2rem 0rem 2rem 0;
+                gap: 2rem;
+
+                &_item {
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            &_sliderBtn{
+                margin-top: 2rem;
+            }
+        }
+
+        &_right{
+            margin-bottom: -2rem;
+
+            &_box{    
+                &_img{
+                    object-fit: cover;
+                    border-radius: 2rem;
+                    max-width: 70vw;
+                    max-height: 70vw;
+                }
+                
+                &_like{
+                    position: absolute;
+                    top: 3vw;
+                    right: 3vw;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    font-size: 2vw;
+                    background-color: var(--icons-color);
+                    color: var(--shadow-dark-color);
+                    padding: 1vw 2vw;
+                    border-radius: 5rem;
+                }
+            }
+        }
+    
+    }
+
+}

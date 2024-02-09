@@ -1,0 +1,205 @@
+.filter{
+    padding: 4rem 0;
+    width: 100%;
+
+    &_box{
+        width: 80%;
+        margin: 0 auto;
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 4rem ;
+
+        &_left{
+            display: flex;
+            gap: 2rem;
+
+            button{
+                border: none;
+                outline: none;
+                padding: 1rem 1.5rem;
+                border-radius: 2rem;
+                border:  1px solid var(--main-bg-color);
+                transition: all .3s ease-in;
+                font-size: 1.3rem;
+                cursor: pointer;
+                background-color: var(--main-bg-color);
+
+                &:hover{
+                    border:  1px solid var(--icons-color);
+                    color: var(--icons-color);
+                    box-shadow: var(--box-shadow);
+                }
+            }
+        }
+        
+        &_right_box{
+            border:  1px solid var(--icons-color);
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            color: var(--icons-color);
+            box-shadow: var(--box-shadow);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        &_items{
+            width: 80%;
+            margin:  0 auto;
+            display: flex;
+            padding: 2rem 0;
+            border-top: 1px solid var(--icons-light-color);
+
+            &_box{
+                padding: 1rem;
+            
+                &_item{
+                    background-color: var(--icons-color);
+                    padding: .5rem 1rem;
+                    border-radius: 2rem;
+                    color: var(--main-bg-color);
+                    cursor: pointer;
+                
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+
+                    &_trans{
+                        border: 1px solid var(--icons-color);
+                        color: var(--icons-color);
+                        padding: .5rem 1rem;
+                        border-radius: 2rem;
+                        cursor: pointer;
+                    
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-device-width: 320px) and (max-device-width: 375px) {
+    .filter_box{
+        width: 90%;
+        display: grid;
+        gap: 4rem;
+
+        &_left{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: .5rem;
+
+            &button{
+                padding: .2rem;
+            }
+        }
+
+        &_items{
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            &_box_item{
+                justify-content: space-between;
+
+                &_trans{
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        &_right_box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+            padding-inline: 2rem ;
+        }
+    }
+}
+
+@media screen and (min-device-width: 375px) and (max-device-width: 425px) {
+    .filter_box{
+        display: grid;
+        gap: 4rem;
+        width: 90%;
+
+        &_left{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            button{
+                padding: 1rem;
+            }
+        }
+
+        &_items{
+            display: grid;
+            width: 90%;
+            grid-template-columns: repeat(2, 1fr);
+
+            &_box_item{
+                justify-content: space-between;
+
+                &_trans{
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        &_right_box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+            padding-inline: 2rem ;
+        }
+    }
+}
+
+@media screen and (min-device-width: 427px) and (max-device-width: 786px) {
+    .filter_box{
+        display: grid;
+        gap: 4rem;
+        width: 90%;
+
+        &_left{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            &button{
+                padding: 1rem;
+            }
+        }
+
+        &_items{
+            display: grid;
+            width: 90%;
+            grid-template-columns: repeat(2, 1fr);
+
+            &_box_item{
+                justify-content: space-between;
+
+                &_trans{
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        &_right_box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+            padding-inline: 2rem;
+        }
+    }
+}

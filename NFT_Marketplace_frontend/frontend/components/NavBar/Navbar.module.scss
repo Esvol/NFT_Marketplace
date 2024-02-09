@@ -1,0 +1,164 @@
+.navbar{
+    position: relative;
+    width: 100%;
+    padding-block: 1.5rem;
+    z-index: 11111;
+
+    &_container{
+        width: 80%;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    
+        &_left{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+
+            &_box_input_box{
+                width: 60%;
+                border: 1px solid var(--icons-color);
+                display: flex;
+                align-items: center;
+                padding: 0.5rem;
+                border-radius: 2rem;
+
+                input{
+                    width: 90%;
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                }
+
+                .search_icon{
+                    cursor: pointer;
+                    font-size: 1.4rem;
+
+                }
+            }
+        }
+
+        &_right{
+            display: grid;
+            grid-template-columns: 1fr 1fr 0.5fr 1fr 0.3fr;
+            gap: 1rem;
+            align-items: center;
+        
+            &_discover, &_help{
+                position: relative;
+                cursor: pointer;
+
+                &_box{
+                    position: absolute;
+                    padding: 1rem 0.5rem;
+                    box-shadow: var(--box-shadow);
+                    font-size: 1rem;
+                    width: 15rem;
+                    border-radius: 1rem;
+                    background-color: var(--main-bg-color);
+                    top: 3rem;
+                }
+            }
+
+            &_notify{
+                font-size: 2rem;
+                cursor: pointer;
+
+                .notify{
+                    font-size: 2rem;
+                }
+            }
+
+            &_button{
+                position: relative;
+                cursor: pointer;
+            }
+
+            &_profile{
+                border-radius: 50%;
+
+                &_box{
+                    position: relative;
+                    cursor: pointer;
+                }
+            }
+
+            &_menuBtn{
+                display: none;
+
+                .menuIcon{
+                    font-size: 2.5rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+
+    .sideBar{
+        position: fixed;
+        top: 0;
+        width: 24rem;
+        background-color: var(--main-bg-color);
+        box-shadow: var(--box-shadow);
+        height: 100vh;
+        overflow-y: auto;
+        display: none;
+        z-index: 11111;
+    
+        ::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 768px){
+    .navbar_container{
+        grid-template-columns: 1fr 1fr;
+
+        &_left{
+            grid-template-columns: 1fr;
+
+            &_box_input_box{
+                display: none;
+            }
+        }
+
+        &_right{
+            grid-template-columns: repeat(3, 1fr);
+            
+            &_menuBtn, .sideBar{
+                display: block;
+            }
+
+            &_discover, &_help, &_button{
+                display: none;
+            }
+        }
+
+    }    
+}
+
+@media screen and (max-width: 1110px){
+    .navbar_container{
+        &_right{
+            &_discover{
+                &_box{
+                    top: 4rem;
+                }
+            }
+
+            &_help{
+                &_box{
+                    top: 4.5rem;
+                }
+            }
+        }
+
+    }    
+}

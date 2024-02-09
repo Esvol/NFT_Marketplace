@@ -1,0 +1,90 @@
+.sideBar{
+    top: 0;
+    position: absolute;
+    max-width: 334px;
+    background-color: var(--main-bg-color);
+
+    &_box{
+        background-color: var(--main-bg-color);
+        padding: 0rem 2rem 2rem;
+    
+        &_p{
+            margin-top: -2rem;
+        }
+    }
+
+    &_closeBtn{
+        position: absolute;
+        top: 3rem;
+        right: 2rem;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        box-shadow: var(--box-shadow);
+        
+        &:hover{
+            transform: rotate(45deg);
+        }
+    }
+
+    &_social{
+        display: flex;
+        gap: 1.3rem;
+        font-size: 1.5rem;
+        align-items: center;
+        margin-top: 1rem;
+    
+        a{
+            padding: 0.2rem;
+            border-radius: 50%;
+            transition: all 0.3s ease-in;
+            display: grid;
+        
+            &:hover{
+                background-color: var(--icons-color);
+                color: var(--shadow-dark-color);
+                box-shadow: 1px solid var(--icons-color);
+            }
+        }
+    }
+
+    &_menu{
+        padding: 2rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        border-top: 1.5px solid var(--icons-color);
+        border-bottom: 1.5px solid var(--icons-color);
+
+        &_box{
+            padding: 1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+
+    &_discover, &_helpCenter{
+        padding-inline: 1rem;
+
+        p{
+            padding: 0.5rem;
+            font-weight: 500;
+        }
+    }
+
+
+    &_button{
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .sideBar{
+        max-width: 768px;
+    }
+}
