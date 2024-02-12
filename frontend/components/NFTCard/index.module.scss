@@ -1,0 +1,205 @@
+.NFTCard{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-bottom: 10rem;
+
+    &_box{
+        background-color: var(--shadow-light-color);
+        padding: 1rem;
+        border-radius: 1rem;
+    
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr); 
+        cursor: pointer;
+        transition: all .3s ease-in;
+        
+        &:hover{
+            box-shadow: var(--box-shadow-2);
+
+            .NFTCard_box_img_img{
+                transform: scale(1.05);
+                border-radius: 1rem;
+            }
+        }
+
+        &_update{
+            grid-column: 1 /-1;
+            grid-row: 1 /-2;
+            z-index: 1111;
+        
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            overflow: hidden;
+
+            &_left{
+                background-color: var(--icons-color);
+                padding: .5rem 1rem;
+                color: var(--main-bg-color);
+                border-radius: 2rem;
+                margin: 1rem;
+
+                &_like{
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.2rem;
+                    gap: .5rem;
+
+                    &_icon{
+                        color: red;
+                    }
+                }
+            }
+
+            &_right{
+                background-color: var(--shadow-light-color);
+                padding: .5rem 5rem;
+                text-align: center;
+                transform: skewX(45deg);
+                border-bottom-left-radius: 1rem ;
+                margin-right: -2rem;
+
+                &_info{
+                    transform: skewX(-45deg);
+                    background-color: var(--shadow-light-color);
+
+                    p{
+                        font-size: 1.2rem;
+                        font-weight: 800;
+                    }
+                }
+            }
+
+            &_details{
+                grid-column: 1 /-1;
+                grid-row: 4 / -1;
+                z-index: 111;
+                align-items: flex-end;
+            
+                display: grid;
+                grid-template-columns: 1.5fr 1fr;
+                overflow: hidden;
+
+                &_category{
+                    color: var(--icons-color);
+                    text-align: end;
+                    margin: 1.5rem;
+                    font-size: 1.5rem;
+                }
+
+                &_price{
+                    background-color: var(--shadow-light-color);
+                    margin-left: -3rem;
+                    padding: 0rem 0 .5rem 0;
+                    transform: skewX(45deg);
+                    border-top-right-radius: 1rem;
+
+                    &_box{
+                        transform: skewX(-45deg);
+                        padding-left: 3.5rem;
+
+                        &_box{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-end;
+                        }
+
+                        h4{
+                            font-size: 1.3rem;
+                        }
+
+                        &_bid{
+                            border: 1px solid var(--icons-color);
+                            padding: .2rem .5rem;
+                            align-items: center;
+                            border-radius: .3rem;
+
+                            small{
+                                background-color: var(--icons-color);
+                                color: var(--main-bg-color);
+                                border-radius: .2rem;
+                                padding: .2rem;
+                            }
+
+                            p{
+                                padding: .5rem 0 0 0;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        &_img{
+            grid-column: 1 / -1;
+            grid-row:  1 / end;
+            overflow: hidden;
+            border-radius: 1rem;
+
+            &_img{
+                border-radius: 1rem;
+                transition: all .4s ease-in;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-device-width: 320px) and (max-device-width: 425px) {
+    
+    .NFTCard{
+        width: 90%;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+
+        &_box_update{
+            &_right{
+                padding: .5rem 2rem;
+    
+                &_info {
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            &_details_price_box{
+                h4{
+                    font-size: 1rem;
+                }
+            }
+        }
+        
+    }
+
+}
+
+@media screen and (min-device-width: 427px) and (max-device-width: 768px) {
+    .NFTCard{
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+
+        &_box_update_right{
+            padding: .5rem 2rem;
+
+            &_info {
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-device-width: 770px) and (max-device-width: 1024px) {
+    .NFTCard{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,103 @@
+
+
+.sliderCard{
+    padding: 1rem;
+    pointer-events: none;
+
+    &_box{
+        transition: all .3s ease-in;
+        border-radius: 2rem;
+        padding-bottom: 1rem;
+
+        &:hover{
+            box-shadow: var(--box-shadow);
+        }
+
+        &_img_img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 2rem;
+        }
+
+        &_title{
+            display: flex;
+            align-items: center;
+            padding-inline: 2rem;
+            justify-content: space-between;
+            gap: 1rem;
+
+            &_like{
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+            }
+        
+            p{
+                font-size: 1.2rem;
+                font-weight: 800;
+            }
+        }
+
+        &_price{
+            display: flex;
+            justify-content: space-between;
+            padding-inline: 2rem;
+            margin-top: 1rem;
+            text-align: end;
+
+            &_box{
+                border: 1px solid var(--icons-color);
+                padding: .2rem 1rem;
+                border-radius: .2rem;
+
+                small{
+                    background-color: var(--icons-color);
+                    padding: .2rem .5rem;
+                    border-radius: .2rem;
+                    color: var(--main-bg-color);
+                }
+
+                p{
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    margin-top: 0.3rem;
+                    // line-height: 0;
+                }
+            }
+
+            &_time{
+                align-items: flex-end;
+                display: grid;
+
+                p{
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-device-width: 320px) and (max-device-width: 375px) {
+    .sliderCard{
+        padding: .5rem;
+
+        &_box{
+            &_title p{
+                font-size: 1rem;
+            }
+
+            &_price{
+                &_box{
+                    padding: .2rem;
+                }
+
+                &_time p{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

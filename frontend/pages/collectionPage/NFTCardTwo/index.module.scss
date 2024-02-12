@@ -1,0 +1,160 @@
+.NFTCardTwo{
+    width: 80%;
+    margin:  0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+
+    &_box{
+        display: grid;
+        cursor: pointer;
+        transition: all .3s ease-in;
+        border-radius: 1rem;
+
+        &:hover{
+            box-shadow: var(--box-shadow);
+        }
+
+        &_like{
+            padding: 1rem;
+            grid-column: 1 / -1;
+            grid-row: 1 / -1;
+            z-index: 111111;
+
+            &_box_box{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &_icon{
+                    color: var(--icons-color);
+                    font-size: 2rem;
+                }
+
+                p{
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    font-size: 1.2rem;
+                    background-color: var(--icons-color);
+                    color: var(--main-bg-color);
+                    border-radius: 2rem;
+                    padding: 0 .5rem;
+                }
+            }            
+        }
+
+        &_img{
+            grid-column: 1 / -1;
+            grid-row: 1 / -1;
+
+            &_img{
+                object-fit: cover;
+                width: 300px;
+                height: 300px;
+                border-radius: 1rem;
+            }
+        }
+
+        &_info{
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+
+            &_left{
+
+                p{
+                    font-size: 2rem;
+                    font-weight: 900;
+                } 
+            }
+
+            small{
+                font-size: 1rem;
+            }
+        }
+
+        &_price{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 1rem;
+
+            &_box{
+                p{
+                    border:  1px solid var(--icons-color);
+                    padding: 1rem 1rem 1rem 1rem;
+                    font-size: 1.4rem;
+                    margin-top: .5rem;
+                    border-radius: .3rem;
+                }
+
+                small{
+                    background-color: var(--icons-color);
+                    color: var(--main-bg-color);
+                    padding: .3rem;
+                    border-radius: .3rem;
+                    margin-left: 1rem;
+                    // margin-bottom: -1rem;
+                }
+            }
+
+            &_stock{
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                font-size: 1.1rem;
+            }
+        }
+        
+    }
+}
+
+@media screen and (min-width: 2000px) and (max-width: 2624px) {
+    .NFTCardTwo{
+        width: 80%;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .NFTCardTwo{
+        width: 90%;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .NFTCardTwo{
+        width: 95%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 625px) and (max-width: 768px) {
+    .NFTCardTwo{
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 424px) {
+    .NFTCardTwo{
+        width: 80%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 625px) {
+    .NFTCardTwo{
+        width: 70%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .NFTCardTwo{
+        width: 93%;
+    }
+}

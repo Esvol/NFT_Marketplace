@@ -1,0 +1,211 @@
+
+.audioCard_box{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 4rem);
+    gap: 1rem;
+    overflow: hidden;
+    transition:  all .3s ease-in;
+    border-radius: 2rem;
+
+    &_like{
+        background-color: var(--icons-color);
+        color: var(--shadow-dark-color);
+        display: flex;
+        align-items: center;
+        gap: .7rem;
+        padding: 1.3rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        margin: 1rem;
+        overflow: hidden;
+
+        &_time{
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+        
+            display: flex;
+            justify-content: space-between;
+            line-height: 0;
+            z-index: 123;
+
+            &_remaing{
+                transform: skewX(-35deg);
+                text-align: center;
+    
+                small{
+                    font-weight: 500;
+                }
+    
+                h5{
+                    font-size: 1.5rem;
+                    margin-top: 1.6rem;
+                }
+            }
+        }
+
+        &_icon{
+            color: var(--main-bg-color);
+            font-size: 2rem;
+
+            &_unlike{
+                color: var(--main-bg-color);
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &_time{
+        background-color: var(--main-bg-color);
+        padding: 1rem 4.5rem;
+        margin-right: -1.4rem;
+        transform: skewX(35deg);
+        border-bottom-left-radius: 1rem;
+    }
+
+    &_player{
+        grid-column: 1 / -1;
+        grid-row:  4 / 5;
+    
+        display:  flex;
+        justify-content: space-between;
+        padding-inline: 3rem;
+        z-index: 1234;
+        align-items: center;
+    }
+
+    &_musicPlayer_icon{
+        padding: 1.3rem;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        background-color: var(--icons-color);
+        color: var(--main-bg-color);
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    &_img{
+        grid-column: 1 / -1;
+        grid-row:  1 / -1;
+    }
+
+    &_details{
+        grid-column: 1 / -1;
+        grid-row: 5 / -1;
+    
+        z-index: 123;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color:  var(--main-bg-color);
+        padding: 1rem 0;
+        width: 90%;
+        border-top-right-radius: 2rem;
+        padding: 2rem;
+        line-height: .1;
+
+        &_info{
+            h4{
+                font-size: 1.1rem;
+                line-height: 3;
+            }
+
+            &_price{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid var(--icons-color);
+                padding: .5rem 1rem;
+                border-radius: .5rem;
+                height: 3rem;
+                cursor: pointer;
+
+                small{
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    top: -9px;
+                    left: 12px;
+                    background-color: var(--icons-color);
+                    color: var(--main-bg-color);
+                    width: 5rem;
+                    height: 1.4rem;
+                    border-radius: .5rem;
+                }
+
+                p{
+                    margin-top: 0.5rem;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        &_stock{
+            text-align: end;
+            display: grid;
+
+            small{
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    &:hover{
+        box-shadow: var(--box-shadow);
+    }
+}
+
+
+@media screen and (max-width: 35em) {
+    .audioCard_box{
+        &_time{
+            padding-inline: 2.5rem;
+        }
+        
+        &_like_time_remaing h5{
+            font-size: 1rem;
+        }
+
+        &_details{
+            padding: 1rem;
+        }
+    }
+}
+
+@media screen and (min-device-width: 427px) and (max-device-width: 768px) {
+    .audioCard_box_like_time_remaing h5{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-device-width: 770px) and (max-device-width: 1024px) {
+    .audioCard_box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 4rem);
+        gap: 1rem;
+        overflow: hidden;
+        transition:  all .3s ease-in;
+        border-radius: 2rem;
+    }
+    
+    .audioCard_box{
+        &_time{
+            padding: 1rem 2rem;
+        }
+
+        &_like_time_remaing h5{
+            font-size: 1rem;
+        }
+
+        &_details_info h4{
+            font-size: 1rem;
+        }
+    }
+
+}
+
+

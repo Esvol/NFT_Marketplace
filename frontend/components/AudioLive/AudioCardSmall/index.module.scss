@@ -1,0 +1,137 @@
+
+// .audioPlayer_box{
+//     display: grid;
+//     grid-template-columns: 2fr 5fr 1fr;
+//     align-items: center;
+//     gap: 1.3rem;
+//     background-color:  var(--bg-shadow-dark-color);
+//     padding: .5rem 1rem;
+//     border-radius: 1rem;
+//     height: 8rem;
+//     transition: all .3s ease-in;
+//     cursor: pointer;
+
+//     &_playBtn{
+//         font-size: 2rem;
+//         background-color: var(--icons-color);
+//         border-radius: 50%;
+//         color: var(--main-bg-color);
+//         padding: 1rem;
+//         cursor: pointer;
+//     }
+
+//     &_info_box{
+//         display: flex;
+//         gap: 1rem;
+
+//         &_price{
+//             border:  1px solid var(--icons-color);
+//             font-size: .8rem;
+//             width: 40%;
+//             font-weight: 600;
+//             border-radius: .2rem;
+
+//             small{
+//                 background-color: var(--icons-color);
+//                 color: var(--main-bg-color);
+//                 padding: .1rem .3rem;
+//                 border-radius: .2rem;
+//             }
+
+//             p{
+//                 // margin-top:  1rem;
+//             }
+//         }
+//     }
+    
+//     &_img{
+//         border-radius: .5rem;
+//     }
+
+//     &:hover{
+//         box-shadow: var(--box-shadow);
+//     }
+// }
+
+
+.audioPlayer_box{
+    display: flex;
+
+    align-items: center;
+    gap: 1.3rem;
+    background-color: var(--bg-shadow-dark-color);
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    height: 8rem;
+    transition: all .3s ease-in;
+    cursor: pointer;
+    line-height: 0;
+
+    &_playBtn{
+        font-size: 2rem;
+        background-color: var(--icons-color);
+        border-radius: 50%;
+        color: var(--main-bg-color);
+        padding: 1rem;
+        cursor: pointer;
+    }
+
+    &_info{
+        display: flex;
+        flex-direction: column;
+        align-items: space-around;
+        
+        h4{
+            height: 20px;
+        }
+
+        &_box{
+            display: flex;
+            gap: 1rem;
+    
+            &_price{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                width: 100%;
+                border:  1px solid var(--icons-color);
+                padding: 0.4rem 0.5rem;
+                font-weight: 600;
+                border-radius: .2rem;
+                width: 4rem;
+                justify-content: center;
+                align-items: center;
+
+                small{
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    top: -6px;
+                    left: 4px;
+                    background-color: var(--icons-color);
+                    color: var(--main-bg-color);
+                    height: 1rem;
+                    width: 3rem;
+                    border-radius: .2rem;
+                }
+    
+                p{
+                    font-size: 10px;
+                    margin-top: 0.8rem;
+                    margin-bottom: 0.2rem;
+                }
+            }
+        }
+    }
+    
+    &_img{
+        border-radius: .5rem;
+    }
+
+    &:hover{
+        box-shadow: var(--box-shadow);
+    }
+}
+

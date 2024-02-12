@@ -1,0 +1,93 @@
+
+.daysComponent{
+    width: 100%;
+    border-radius: 1rem;
+    transition: all .3s ease-in;
+    cursor: pointer;
+
+    &:hover{
+        box-shadow: var(--box-shadow);
+    }
+
+    &_box{
+        &_img{
+            &_img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 1rem;
+            }
+
+            &_1, &_2, &_3{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-bottom-left-radius: 1rem;
+            }
+
+        }
+
+        &_profile{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: .5rem;
+        }
+
+        &_title{
+            padding: 1rem 2rem;
+
+            &_info{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &_profile{
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    span{
+                        font-weight: 600;
+                        padding-inline: .5rem;
+                    }
+
+                    &_img{
+                        border-radius: 50%;
+                    }
+                    
+                    small{
+                        margin-left: 0.3rem;
+                    }
+                }
+
+                &_price{
+                    small{
+                        font-weight: 600;
+                        border: 3px solid var(--icons-color);
+                        padding: .5rem;
+                        border-radius: .5rem;
+                    }
+                }
+            }
+        }
+
+        &_title{
+            padding: 1rem;
+        }
+    }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+    .daysComponent_box{
+        &_profile{
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &_title_info{
+            flex-direction: column;
+            gap: 2rem;
+            align-items: flex-start;
+            padding: 1rem 0;
+        }
+    }
+}

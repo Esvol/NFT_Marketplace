@@ -54,10 +54,6 @@
                 &_icon{
                     font-size: 4rem;
                 }
-
-                &_info{
-
-                }
             }
             
         }
@@ -183,6 +179,18 @@
     
 }
 
+
+@media screen and (min-device-width: 319px) and (max-device-width: 375px) {
+    .bigNFTSlider_box_left_bidding_box_price{
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-device-width: 375px) and (max-device-width: 425px) {
+    .bigNFTSlider_box_left_bidding_box_price{
+        font-size: 12px;
+    }
+}
 
 @media screen and (max-width: 1041px) {
     .bigNFTSlider_box{
